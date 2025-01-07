@@ -1,0 +1,2 @@
+export const scotty_kelly_and_his_twin = 'https://static.scientificamerican.com/sciam/cache/file/BDACB499-BA4F-401E-A90DF61A2D0AFA24_source.jpg?crop=4%3A3%2Csmart&w=1200'
+export const time_dilation_formula = 'https://www.emc2-explained.info/Time-Dilation-Worked-Examples/index_htm_files/2930.webp'
