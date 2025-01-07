@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react';
+import { useState, useRef, useEffect, Dispatch, SetStateAction, ChangeEvent } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Vector3 } from 'three';
 import Spaceship from '../meshes/Spaceship';
@@ -12,27 +12,35 @@ const Globe = () => {
   );
 };
 
-const TravelingTwin = ({ travelingSpeed, setTravelingTime }: {travelingSpeed: number, setTravelingTime: Dispatch<SetStateAction<number>>}) => {
+const TravelingTwin = ({ travelingSpeed, setTravelingTime, earthTime }: {travelingSpeed: number, setTravelingTime: Dispatch<SetStateAction<number>>, earthTime: number}) => {
   const travelingTwinRef = useRef<Mesh>(null);
   const spaceshipPosition = useRef<Vector3>(new Vector3(0, 0, 0));
-  let elapsedTime = 0;
 
-  useFrame((state, delta) => {
-    // Update time based on speed and calculate time dilation effect
-    elapsedTime += delta * travelingSpeed;
-    console.log(elapsedTime);
-    spaceshipPosition.current.x += travelingSpeed;
+  const speedOfLight = 299792458; // m/s
+
+  const calculateTimeDilation = () => {
+    const time_dilated = earthTime * Math.sqrt(1 - (travelingSpeed * travelingSpeed) / (speedOfLight * speedOfLight));
+    return time_dilated;
+  };
+
+  const adjust_factor = 0.05; //for slower visualization
+
+  useFrame(() => {
+    spaceshipPosition.current.x += travelingSpeed * adjust_factor;
     travelingTwinRef.current!.position.x = spaceshipPosition.current.x;
 
-    // Update traveling time based on speed
-    elapsedTime += delta * travelingSpeed;
-    setTravelingTime((prev) => prev + delta * travelingSpeed);
+    setTravelingTime(calculateTimeDilation());
 
     // Reset spaceship position after a certain distance (for loop effect)
-    if (spaceshipPosition.current.x > 5) {
-      spaceshipPosition.current.x = -5;
+    if (spaceshipPosition.current.x > 10) {
+      spaceshipPosition.current.x = -10;
     }
   });
+
+  useEffect(() => {
+    setTravelingTime(0);
+    spaceshipPosition.current.x = 0;
+  }, [travelingSpeed])
 
   return (
     <mesh ref={travelingTwinRef} position={spaceshipPosition.current}>
@@ -44,16 +52,25 @@ const TravelingTwin = ({ travelingSpeed, setTravelingTime }: {travelingSpeed: nu
 const TwinParadoxSim = () => {
   const [earthTime, setEarthTime] = useState(0);
   const [travelingTime, setTravelingTime] = useState(0);
+  const [travelingSpeed, setTravelingSpeed] = useState(0.05);
 
-  const travelingSpeed = 0.05; 
-  const maxTime = 60;  // Duration of the simulation in seconds
+  const maxTime = 10; // Duration of the simulation in seconds
+
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setEarthTime((prev) => Math.min(prev + 0.1, maxTime));
+      setEarthTime((prev) => (prev + 0.1 >= maxTime ? 0 : prev + 0.1));
     }, 100);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    setEarthTime(0);
+  }, [travelingSpeed]);
+
+  function onChangeSpeed(e : ChangeEvent<HTMLInputElement>) {
+    setTravelingSpeed(parseFloat(e.target.value));
+  }
 
   return (
     <div>
@@ -62,10 +79,12 @@ const TwinParadoxSim = () => {
           <ambientLight intensity={0.5} />
           <directionalLight position={[5, 5, 5]} />
           <Globe />
-          <TravelingTwin travelingSpeed={travelingSpeed} setTravelingTime={setTravelingTime} />
+          <TravelingTwin travelingSpeed={travelingSpeed} setTravelingTime={setTravelingTime} earthTime={earthTime}/>
       </Canvas>
 
       <div>
+        <label>Traveling speed: </label>
+        <input type='number' value={travelingSpeed} onChange={onChangeSpeed} className='text-black'/>
         <p>Earth Twin's Time: {earthTime.toFixed(2)} seconds</p>
         <p>Traveling Twin's Time: {travelingTime.toFixed(2)} seconds</p>
       </div>

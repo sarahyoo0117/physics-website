@@ -11,8 +11,8 @@ const TimeDilationSim = () => {
 
   const calculateTimeDilation = (v: number, t: number) => {
     const velocity = v * speedOfLight; // Convert to m/s
-    const timeDilationFactor = Math.sqrt(1 - (velocity * velocity) / (speedOfLight * speedOfLight));
-    return t / timeDilationFactor;
+    const time_dilated = t * Math.sqrt(1 - (velocity * velocity) / (speedOfLight * speedOfLight));
+    return time_dilated;
   };
 
   const handleVelocityChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +35,7 @@ const TimeDilationSim = () => {
           <MathJax>{"$t_\\text{dilated} = t_\\text{earth} \\times \\sqrt{1- \\frac{v^2}{c^2}}$"}</MathJax>
         </MathJaxContext>
         <div>
-          <label>Enter Duration (in hours):</label>
+          <label>Enter Duration (in seconds):</label>
           <input type="number" value={duration} onChange={handleDurationChange} />
         </div>
       </div>
@@ -53,18 +53,8 @@ const TimeDilationSim = () => {
       </div>
 
       <div>
-        <p>Time on Earth: {duration} hours</p>
-        <p>Time for traveler: {timeEarth.toFixed(2)} hours</p>
-      </div>
-
-      <div>
-        <h2>After 1 day on Earth</h2>
-        <p>Time for traveler: {(timeEarth * 24).toFixed(2)} hours</p>
-      </div>
-
-      <div>
-        <h2>After 1 year on Earth: </h2>
-        <p>Time for traveler: {(timeEarth * 24 * 365).toFixed(2)} hours</p>
+        <p>Time on Earth: {duration} seconds</p>
+        <p>Time for traveler: {timeEarth.toFixed(2)} seconds</p>
       </div>
     </div>
   );
