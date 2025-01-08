@@ -49,7 +49,10 @@ const GeneralRelativity = () => {
         </section>
         <section className="space-y-6 text-lg mx-auto max-w-4xl pt-6">
             <h2 className="text-2xl font-dm_serif">Gravitational Time Dilation Simulation</h2>
-            <p>Play with simulation and understand time dilation by gravity!</p>
+            <p className='whitespace-pre-line'>
+                Play with simulation and understand time dilation by gravity!
+                See how orbiting object's time is dilated near the gravitational field.
+            </p>
             <GeneralRelativitySim />
         </section>
     </main>

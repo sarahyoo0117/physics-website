@@ -17,7 +17,7 @@ function GeneralRelativitySim() {
   }
 
   return (
-    <section className="h-[80vh]">
+    <section className="h-[70vh]">
       <div className="flex gap-6 items-center">
         <p>Central mass: {mass}</p>
         <input
@@ -44,7 +44,7 @@ function GeneralRelativitySim() {
 
       <Canvas>
         <PerspectiveCamera position={[0, 0, 200]} makeDefault />
-        <OrbitControls enableZoom={false}/>
+        <OrbitControls enableZoom={false} />
         <ambientLight intensity={1}/>
         <directionalLight position={[10, 10, 10]} intensity={1} />
         <CentralMass position={new THREE.Vector3(0, - mass * 0.3, 0)} />
@@ -73,7 +73,7 @@ function CentralMass({ position = new THREE.Vector3(0, 0, 0) } : { position : TH
 
 function OrbitingObject({ orbitRadius, time, setTime, dilatedTime, setDilatedTime, mass } : { orbitRadius: number, time:number, setTime: Dispatch<SetStateAction<number>>, dilatedTime: number, setDilatedTime: Dispatch<SetStateAction<number>>, mass: number}) {
   const ref = useRef<THREE.Mesh>(null);
-  const visualFactor = 100000000000000000000000000;
+  const visualFactor = 100000000000000000000000000; //make the mass very massive
   useFrame((state, delta) => {
     setTime((prev) => prev + delta); 
     setDilatedTime(calculateTimeDilationByGravity(mass * visualFactor, orbitRadius, time));

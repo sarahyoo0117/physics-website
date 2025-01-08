@@ -3,3 +3,4 @@ export const time_dilation_formula = 'https://www.emc2-explained.info/Time-Dilat
 export const special_relativity='https://d1yqpar94jqbqm.cloudfront.net/styles/media_full/s3/images/a3e54aae9db8733d6b61d932ad701a790c48e56a.jpg?itok=9DSpcIAa'
 export const satellite='https://pilotswhoaskwhy.com/wp-content/uploads/2021/02/img_0490.jpg'
 export const gravitational_time_dilation_formula='https://lh3.googleusercontent.com/proxy/XZyyKssIhGL06EYuIYAhiLjt_n9y_u1N69XYit_oJbjCAcEVJQlrfbb6DHppOG2UpUYsuZNWc10Z_3oAe9LUn9JfdxLJcLxm2GBWglJ1acg6432Xc00-flzfVIgpQlwvUibj0qRs_urzb3yEj_pMq891zAORoiy-B8cr'
+export const travis_scott='https://i.dailymail.co.uk/1s/2021/05/02/19/42485396-0-image-a-31_1619980350648.jpg'
