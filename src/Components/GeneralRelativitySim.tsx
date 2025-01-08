@@ -1,13 +1,21 @@
-import { useRef, useState } from "react";
+import { Dispatch, SetStateAction, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Sphere } from "@react-three/drei";
 import * as THREE from "three";
 import GravitationalField from "./GravitationalField";
+import { calculateTimeDilationByGravity } from "../utils";
 
 function GeneralRelativitySim() {
   const [orbitRadius, setOrbitRadius] = useState(50);
   const [mass, setMass] = useState(100); //central mass
-  
+  const [time, setTime] = useState(0); 
+  const [dilatedTime, setDilatedTime] = useState(0);
+
+  function reset_timer() {
+    setTime(0);
+    setDilatedTime(0);
+  }
+
   return (
     <section className="h-[80vh]">
       <div className="flex gap-6 items-center">
@@ -30,14 +38,23 @@ function GeneralRelativitySim() {
           onChange={(e) => setOrbitRadius(parseFloat(e.target.value))}
           />
       </div>
+      <p>original time: {time.toFixed(3)} s</p>
+      <p>dilated time: {dilatedTime.toFixed(3)} s</p>
+      <button onClick={reset_timer} className="bg-white text-black px-1">reset timer</button>
 
       <Canvas>
         <PerspectiveCamera position={[0, 0, 200]}  makeDefault />
         <ambientLight intensity={1}/>
         <directionalLight position={[10, 10, 10]} intensity={1} />
-        <CentralMass position={new THREE.Vector3(0, 0, 0)} />
+        <CentralMass position={new THREE.Vector3(0, - mass * 0.3, 0)} />
         <GravitationalField size={200}  mass={mass} />
-        <OrbitingObject mass={mass} centralMassPosition={new THREE.Vector3(0, 0, 0)} orbitRadius={orbitRadius}/>
+        <OrbitingObject 
+           mass={mass} 
+           orbitRadius={orbitRadius} 
+           time={time} setTime={setTime} 
+           dilatedTime={dilatedTime} 
+           setDilatedTime={setDilatedTime}
+        />
         <OrbitControls />
       </Canvas>
     </section>
@@ -45,6 +62,7 @@ function GeneralRelativitySim() {
 }
 
 export default GeneralRelativitySim
+
 function CentralMass({ position = new THREE.Vector3(0, 0, 0) } : { position : THREE.Vector3}) {
   return (
     <Sphere args={[10, 32, 32]} position={position}>
@@ -53,18 +71,13 @@ function CentralMass({ position = new THREE.Vector3(0, 0, 0) } : { position : TH
   );
 }
 
-function OrbitingObject({ mass, centralMassPosition, orbitRadius } : { mass: number, centralMassPosition : THREE.Vector3, orbitRadius: number}) {
+function OrbitingObject({ orbitRadius, time, setTime, dilatedTime, setDilatedTime, mass } : { orbitRadius: number, time:number, setTime: Dispatch<SetStateAction<number>>, dilatedTime: number, setDilatedTime: Dispatch<SetStateAction<number>>, mass: number}) {
   const ref = useRef<THREE.Mesh>(null);
-  const [elapsedTime, setElapsedTime] = useState(0);
-  
+  const visualFactor = 100000000000000000000000000;
   useFrame((state, delta) => {
-    const distance = ref.current!.position.distanceTo(
-      new THREE.Vector3(...centralMassPosition)
-    );
-    const timeDilation = 1 / (1 + 0.01 * Math.max(10, 1 / distance)); // Simplified time dilation formula
-    setElapsedTime((prev) => prev + delta * timeDilation);
-    
-    const angle = elapsedTime * 0.5; // Orbital speed
+    setTime((prev) => prev + delta); 
+    setDilatedTime(calculateTimeDilationByGravity(mass * visualFactor, orbitRadius, time));
+    const angle = dilatedTime + delta * 0.5; // Orbital speed
     ref.current!.position.set(
       orbitRadius * Math.cos(angle),
       0,
