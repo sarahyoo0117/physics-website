@@ -43,7 +43,8 @@ function GeneralRelativitySim() {
       <button onClick={reset_timer} className="bg-white text-black px-1">reset timer</button>
 
       <Canvas>
-        <PerspectiveCamera position={[0, 0, 200]}  makeDefault />
+        <PerspectiveCamera position={[0, 0, 200]} makeDefault />
+        <OrbitControls enableZoom={false}/>
         <ambientLight intensity={1}/>
         <directionalLight position={[10, 10, 10]} intensity={1} />
         <CentralMass position={new THREE.Vector3(0, - mass * 0.3, 0)} />
@@ -55,7 +56,6 @@ function GeneralRelativitySim() {
            dilatedTime={dilatedTime} 
            setDilatedTime={setDilatedTime}
         />
-        <OrbitControls />
       </Canvas>
     </section>
   );
