@@ -1,2 +1,5 @@
 export const scotty_kelly_and_his_twin = 'https://static.scientificamerican.com/sciam/cache/file/BDACB499-BA4F-401E-A90DF61A2D0AFA24_source.jpg?crop=4%3A3%2Csmart&w=1200'
 export const time_dilation_formula = 'https://www.emc2-explained.info/Time-Dilation-Worked-Examples/index_htm_files/2930.webp'
+export const special_relativity='https://d1yqpar94jqbqm.cloudfront.net/styles/media_full/s3/images/a3e54aae9db8733d6b61d932ad701a790c48e56a.jpg?itok=9DSpcIAa'
+export const satellite='https://pilotswhoaskwhy.com/wp-content/uploads/2021/02/img_0490.jpg'
+export const gravitational_time_dilation_formula='https://lh3.googleusercontent.com/proxy/XZyyKssIhGL06EYuIYAhiLjt_n9y_u1N69XYit_oJbjCAcEVJQlrfbb6DHppOG2UpUYsuZNWc10Z_3oAe9LUn9JfdxLJcLxm2GBWglJ1acg6432Xc00-flzfVIgpQlwvUibj0qRs_urzb3yEj_pMq891zAORoiy-B8cr'

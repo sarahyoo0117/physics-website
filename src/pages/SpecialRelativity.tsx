@@ -5,7 +5,7 @@ import { math_jx_config } from '../configs'
 
 const SpecialRelativity = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6 rounded-lg shadow-sm">
+    <main className="max-w-4xl mx-auto pt-6">
         <h1 className="text-4xl font-dm_serif font-bold text-center mb-6">
             Method 1: Time Traveling by Speeds
         </h1>
@@ -68,7 +68,7 @@ const SpecialRelativity = () => {
         <section className="space-y-6 mt-12 text-lg">
             <h2 className="text-2xl font-dm_serif">Twin Paradox in Real Life: The Astronaut Scotty Kelly and His Brother</h2>
             <div className='flex flex-col gap-4'>
-                <img src={scotty_kelly_and_his_twin} className='h-[500px] w-[800px]'/>
+                <img src={scotty_kelly_and_his_twin} className='h-[560px]' alt='Scotty Kelly and His Twin Brother'/>
                 <label className='text-gray-400'>^ Scotty Kelly and his twin brother (left)</label>
                 <p>
                     Astronauts experience time dilation because they travel at high speeds in orbitals around the Earth. For example, former NASA astronaut Scotty Kelly completed historic one-year mission abroad the International Space Station (ISS), which was the longest spaceflight by an American astronaut. While in space, he aged more slowly than his twin brother, who stayed on the Earth.
@@ -88,8 +88,7 @@ const SpecialRelativity = () => {
                 <p>Scotty Kelly aged 0.015 seconds slowerly than his twin brother Mark during the 520 days in orbit.</p>
             </div>
         </section>
-    </div>
-
+    </main>
   )
 }
 

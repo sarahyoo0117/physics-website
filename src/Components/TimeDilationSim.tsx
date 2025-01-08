@@ -40,7 +40,7 @@ const TimeDilationSim = () => {
         </div>
       </div>
 
-      <div className=''>
+      <div>
         <input
           type="range"
           min="0"
