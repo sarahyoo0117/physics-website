@@ -31,7 +31,7 @@ const Wormholes = () => {
                 In theory, if one end of a traversable wormhole were moved at a significant fraction of the speed of light or placed in a strong gravitational field (near a massive object like a black hole), it could experience time dilation as explained in the general relativity section.
                 This time dilation creates so-called, 'time traveling' effect.
             </p>
-            <p>Watch video below for more information of wormholes theory.</p>
+            <p>Watch video below for more information about wormhole theory.</p>
             <div className="flex justify-center">
                 <iframe 
                     width="800"
