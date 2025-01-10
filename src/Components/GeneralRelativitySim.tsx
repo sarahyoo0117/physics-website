@@ -74,8 +74,7 @@ function CentralMass({ position = new THREE.Vector3(0, 0, 0) } : { position : TH
 function OrbitingObject({ orbitRadius, time, setTime, dilatedTime, setDilatedTime, mass } : { orbitRadius: number, time:number, setTime: Dispatch<SetStateAction<number>>, dilatedTime: number, setDilatedTime: Dispatch<SetStateAction<number>>, mass: number}) {
   const ref = useRef<THREE.Mesh>(null);
   const visualFactor = 100000000000000000000000000; //make the mass very massive
-  useFrame(({ clock }) => {
-    const delta = clock.getDelta();
+  useFrame((_, delta) => {
     setTime((prev) => prev + delta); 
     setDilatedTime(calculateTimeDilationByGravity(mass * visualFactor, orbitRadius, time));
     const angle = dilatedTime + delta * 0.5; // Orbital speed
