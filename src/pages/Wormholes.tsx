@@ -2,7 +2,7 @@ import { WormholeSim } from "../Components"
 
 const Wormholes = () => {
   return (
-    <main className="pt-6">
+    <main className="pt-6 font-open_sans">
         <h1 className="text-4xl font-dm_serif font-bold text-center mb-6">
             Extra: Wormhole Theory
         </h1>

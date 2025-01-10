@@ -5,7 +5,7 @@ import { math_jx_config } from '../configs'
 
 const SpecialRelativity = () => {
   return (
-    <main className="max-w-4xl mx-auto pt-6">
+    <main className="max-w-4xl mx-auto pt-6 font-open_sans">
         <h1 className="text-4xl font-dm_serif font-bold text-center mb-6">
             Method 1: Time Traveling by Speeds
         </h1>

@@ -8,7 +8,9 @@ module.exports = {
       
     },
     fontFamily: {
-      dm_serif:["DM Serif Text", "serif"]
+      dm_serif:["DM Serif Text", "serif"],
+      open_sans: ["Open Sans", "serif"],
+      pt_serif: ["PT Serif", "serif"]
     }
   },
   plugins: [],
