@@ -19,13 +19,13 @@ const Application = () => {
             </p>
             <MathJaxContext version={3} config={math_jx_config}>
               <MathJax>Travis Scott's total flight time: 42 days 22 hours 57 minutes {'$= 3711420 s$'}</MathJax>
-              <MathJax>Private jet model: Embraer Lineage 1000 / cruising speed: {'$871 km/h \\div 3.6 = 242.5 m/s$'}</MathJax>
+              <MathJax>Private jet model: Embraer Lineage 1000, cruising speed: {'$871 km/h \\div 3.6 = 242.5 m/s$'}</MathJax>
               <MathJax>Speed of light: {'$3 \\times 10^8 m/s$'}</MathJax>
               <MathJax>{"$t_\\text{dilated} = t_\\text{earth} \\times \\sqrt{1- \\frac{v^2}{c^2}}$"}</MathJax>
               <MathJax>{"$t_\\text{dilated} = (3711420 s) \\times \\sqrt{1- \\frac{(242.5 m/s)^2}{(3 \\times 10^8 m/s)^2}}$"}</MathJax>
               <MathJax>{'$t_\\text{dilated} = 3711419.9999987874 s$'}</MathJax>
               <MathJax>{"time difference = $t _\\text{dilated}-t_\\text{earth}= 1.21 \\times 10^-6 s$"}</MathJax>
-              <MathJax>{'With total time flights of 3.7 million seconds (around 1031 hours), Travis Scott is living about $1.21 \\times 10^-6 s$ slower than us!'}</MathJax>
+              <MathJax>{'With total time flights of 3.7 million seconds (around 1031 hours), Travis Scott is living about $1.21 \\times 10^-6 s$ more slowly than us!'}</MathJax>
             </MathJaxContext> 
         </section>
     </main>

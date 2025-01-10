@@ -1,4 +1,4 @@
-import { Application, GeneralRelativity, Introduction, SpecialRelativity } from './pages';
+import { Application, GeneralRelativity, Introduction, SpecialRelativity, Wormholes } from './pages';
 
 const MainCanvas = () => {
   return (
@@ -7,6 +7,7 @@ const MainCanvas = () => {
       <SpecialRelativity />
       <GeneralRelativity />
       <Application />
+      <Wormholes />
     </div>
   )
 }
