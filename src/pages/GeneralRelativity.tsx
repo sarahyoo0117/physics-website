@@ -4,7 +4,7 @@ import { gravitational_time_dilation_formula, satellite } from '../imeags'
 const GeneralRelativity = () => {
   return (
     <main className='pt-6 font-open_sans'>
-        <h1 className="text-4xl font-dm_serif font-bold text-center mb-6">
+        <h1 className="text-4xl font-dm_serif text-center mb-6">
             Method 2: Gravitational Time Dilation
         </h1>
         <section className="space-y-6 text-lg mx-auto max-w-4xl">

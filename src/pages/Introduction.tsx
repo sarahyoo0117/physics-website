@@ -3,7 +3,7 @@ const Introduction = () => {
   return (
     <main className="font-open_sans pt-6">
         <section className="max-w-4xl mx-auto text-lg flex flex-col gap-4 relative">
-            <h1 className="text-4xl font-dm_serif font-bold text-center mb-6">
+            <h1 className="text-4xl font-dm_serif text-center mb-6">
                 Time Traveling Into the Future
             </h1>
             <span className='absolute right-0 top-10'>by Sarah Yoo</span>

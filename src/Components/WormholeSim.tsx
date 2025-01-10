@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import TraversableWormhole from './TraversableWormhole';
+import TraversableWormhole from '../meshes/TraversableWormhole';
 import {  OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
 const WormholeSim = () => {
@@ -10,7 +10,7 @@ const WormholeSim = () => {
       <ambientLight />
       <directionalLight position={[10, 10, 10]} />
       <TraversableWormhole /> 
-    <OrbitControls />
+      <OrbitControls enableZoom={false}/>
     </Canvas>
   </section>
   );
