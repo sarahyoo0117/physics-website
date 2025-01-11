@@ -2,7 +2,7 @@ import { WormholeSim } from "../Components"
 
 const Wormholes = () => {
   return (
-    <main className="pt-6 font-open_sans">
+    <div className="pt-6 font-open_sans">
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Extra: Wormhole Theory
         </h1>
@@ -31,6 +31,10 @@ const Wormholes = () => {
                 In theory, if one end of a traversable wormhole were moved at a significant fraction of the speed of light or placed in a strong gravitational field (near a massive object like a black hole), it could experience time dilation as explained in the general relativity section.
                 This time dilation creates so-called, 'time traveling' effect.
             </p>
+            <p>
+                Physicists, including Stephen Hawking, assume that wormholes constantly pop in and out of existence at the quantum scale, far smaller than atoms. 
+                However, there is no evidence for the existence of wormholes, even if evidence of black holes is substantial. The theory hasn’t been proved due to the incompatibility of general relativity with quantum mechanics.
+            </p>
             <p>Watch video below for more information about wormhole theory.</p>
             <div className="flex justify-center">
                 <iframe 
@@ -42,7 +46,17 @@ const Wormholes = () => {
                 />
             </div>
         </section>
-    </main>
+        <section className="space-y-6 text-lg mx-auto max-w-4xl mt-8">
+            <h2 className="text-2xl font-dm_serif">Conclusion + Is It Possible to Time-Travel Into the Past?</h2>
+            <p>
+                The relativity theories say it is possible to time travel into the future. It can be done by travelling at speeds close to the speed of light or spending time in an intense gravitational field. However, travelling into the past is either wildly difficult or absolutely impossible.
+            </p>
+            <p>
+                One specific reason of this is because going back to the past requires universal to decrease in enthrophy, which is a measure of the disorder of a system. This violates the second law of thermodynamics stating that entropy or randomness must always increase.
+
+            </p>
+        </section>
+    </div>
   )
 }
 

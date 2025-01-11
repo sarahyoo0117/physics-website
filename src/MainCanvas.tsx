@@ -2,7 +2,7 @@ import { Application, Citations, GeneralRelativity, Introduction, SpecialRelativ
 
 const MainCanvas = () => {
   return (
-    <div className="p-6">
+    <div className="p-6 flex flex-col gap-24">
       <Introduction />
       <SpecialRelativity />
       <GeneralRelativity />

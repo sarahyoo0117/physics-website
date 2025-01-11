@@ -5,7 +5,7 @@ import { math_jx_config } from '../configs'
 
 const SpecialRelativity = () => {
   return (
-    <main className="max-w-4xl mx-auto pt-6 font-open_sans">
+    <div className="max-w-4xl mx-auto pt-6 font-open_sans">
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Method 1: Time Traveling by Speeds
         </h1>
@@ -88,7 +88,7 @@ const SpecialRelativity = () => {
                 <p>Scotty Kelly aged 0.015 seconds slowerly than his twin brother Mark during the 520 days in orbit.</p>
             </div>
         </section>
-    </main>
+    </div>
   )
 }
 

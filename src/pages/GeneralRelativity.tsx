@@ -3,7 +3,7 @@ import { gravitational_time_dilation_formula, satellite } from '../imeags'
 
 const GeneralRelativity = () => {
   return (
-    <main className='pt-6 font-open_sans'>
+    <div className='pt-6 font-open_sans'>
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Method 2: Gravitational Time Dilation
         </h1>
@@ -55,7 +55,7 @@ const GeneralRelativity = () => {
             </p>
             <GeneralRelativitySim />
         </section>
-    </main>
+    </div>
   )
 }
 

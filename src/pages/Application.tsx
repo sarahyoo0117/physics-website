@@ -4,7 +4,7 @@ import { math_jx_config } from "../configs"
 
 const Application = () => {
   return (
-    <main className='pt-6 font-open_sans'>
+    <div className='pt-6 font-open_sans'>
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Application: Travis Scott's Time Dilation 
         </h1>
@@ -28,7 +28,7 @@ const Application = () => {
               <MathJax>{'With total time flights of 3.7 million seconds (around 1031 hours), Travis Scott is living about $1.21 \\times 10^-6 s$ more slowly than us!'}</MathJax>
             </MathJaxContext> 
         </section>
-    </main>
+    </div>
   )
 }
 

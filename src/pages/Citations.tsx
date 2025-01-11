@@ -1,7 +1,7 @@
 
 const Citations = () => {
   return (
-    <main className="pt-6 font-dm_serif">
+    <div className="pt-6 font-dm_serif">
         <section className="mx-auto max-w-4xl flex flex-col gap-4">
             <h2 className="text-2xl font-dm_serif">References</h2>
             <p>
@@ -33,7 +33,7 @@ const Citations = () => {
                 <a href="https://www.sciencealert.com/there-s-a-theory-of-relativity-that-could-allow-you-to-fly-through-a-wormhole">https://www.sciencealert.com/there-s-a-theory-of-relativity-that-could-allow-you-to-fly-through-a-wormhole</a> 
             </p>
         </section>
-    </main>
+    </div>
   )
 }
 
