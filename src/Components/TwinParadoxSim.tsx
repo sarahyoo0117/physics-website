@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, Dispatch, SetStateAction, ChangeEvent } fr
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Vector3 } from 'three';
 import Spaceship from '../meshes/Spaceship';
+import { calculateTimeDilationBySpeed } from '../utils';
 
 const Globe = () => {
   return (
@@ -16,22 +17,13 @@ const TravelingTwin = ({ travelingSpeed, setTravelingTime, earthTime }: {traveli
   const travelingTwinRef = useRef<Mesh>(null);
   const spaceshipPosition = useRef<Vector3>(new Vector3(0, 0, 0));
 
-  const speedOfLight = 299792458; // m/s
-
-  const calculateTimeDilation = () => {
-    const time_dilated = earthTime * Math.sqrt(1 - (travelingSpeed * travelingSpeed) / (speedOfLight * speedOfLight));
-    return time_dilated;
-  };
-
-  const adjust_factor = 0.05; //for slower visualization
-
+  const adjust_factor = 0.05; 
   useFrame(() => {
     spaceshipPosition.current.x += travelingSpeed * adjust_factor;
     travelingTwinRef.current!.position.x = spaceshipPosition.current.x;
+    const visual_factor = 10000000;
+    setTravelingTime(calculateTimeDilationBySpeed(earthTime, travelingSpeed * visual_factor));
 
-    setTravelingTime(calculateTimeDilation());
-
-    // Reset spaceship position after a certain distance (for loop effect)
     if (spaceshipPosition.current.x > 10) {
       spaceshipPosition.current.x = -10;
     }
@@ -54,8 +46,7 @@ const TwinParadoxSim = () => {
   const [travelingTime, setTravelingTime] = useState(0);
   const [travelingSpeed, setTravelingSpeed] = useState(0.05);
 
-  const maxTime = 10; // Duration of the simulation in seconds
-
+  const maxTime = 10; 
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -73,7 +64,7 @@ const TwinParadoxSim = () => {
   }
 
   return (
-    <div>
+    <div className='h-[50vh] flex flex-col'>
       <p>Twin Paradox Simulation:</p>
       <Canvas>
           <ambientLight intensity={0.5} />
@@ -84,8 +75,8 @@ const TwinParadoxSim = () => {
 
       <div>
         <label>Traveling speed: </label>
-        <input type='number' value={travelingSpeed} onChange={onChangeSpeed} className='text-black'/>
-        <p>Earth Twin's Time: {earthTime.toFixed(2)} seconds</p>
+        <input type='number' value={travelingSpeed} onChange={onChangeSpeed} className='text-black' max="30"/>
+        <p>Earth Twin's Time: {earthTime.toFixed(2)} seconds <span className='px-4'>* after 30, time is so tiny that it is shown as NaN.</span></p>
         <p>Traveling Twin's Time: {travelingTime.toFixed(2)} seconds</p>
       </div>
     </div>

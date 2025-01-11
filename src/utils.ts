@@ -4,5 +4,5 @@ export function calculateTimeDilationByGravity(M: number, r: number, t : number)
     return t * Math.sqrt(1 - (2 * G * M) / (r * Math.pow(c, 2)));
 }
 export function calculateTimeDilationBySpeed (t: number, v: number) {
-    return t * Math.sqrt(1 - Math.pow(v, 2) / Math.pow(c, 2));
+    return t * Math.sqrt(1 - (v * v) / (c * c));
 };
