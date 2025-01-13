@@ -3,7 +3,7 @@ import { exotic_matter, field_equation, wormhole } from "../imeags"
 
 const Wormholes = () => {
   return (
-    <div className="pt-6 font-open_sans">
+    <div className="pt-6 font-open_sans flex flex-col gap-6">
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Extra: Wormhole Theory
         </h1>
@@ -24,6 +24,9 @@ const Wormholes = () => {
                 <li>8πG/c4 is just a product of constants and is known as Einstein’s gravitational constant, the counterpart of Newton’s gravitational constant (G) that most of us are more familiar with.</li>
                 <li>Tμν is the stress-energy tensor, which describes the local (in the nearby vicinity) energy, momentum, and stress within that spacetime.</li>
             </ul>
+        </section>
+        
+        <section className="space-y-6 mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">Structure of Wormhole and How It Works</h2>
             <p>
                 A wormhole is a hypothetical, tunnel-like structure that connects two different points in space-time. 

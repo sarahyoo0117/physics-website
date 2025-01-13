@@ -4,7 +4,7 @@ import { math_jx_config } from "../configs"
 
 const Application = () => {
   return (
-    <div className='pt-6 font-open_sans'>
+    <div className='pt-6 font-open_sans flex flex-col gap-6'>
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Application: Travis Scott's Time Dilation 
         </h1>
