@@ -65,7 +65,6 @@ const TwinParadoxSim = () => {
 
   return (
     <div className='h-[50vh] flex flex-col'>
-      <p>Twin Paradox Simulation:</p>
       <Canvas>
           <ambientLight intensity={0.5} />
           <directionalLight position={[5, 5, 5]} />

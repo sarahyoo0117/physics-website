@@ -5,12 +5,12 @@ import { math_jx_config } from '../configs'
 
 const SpecialRelativity = () => {
   return (
-    <div className="max-w-4xl mx-auto pt-6 font-open_sans">
+    <div className="pt-6 font-open_sans">
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Method 1: Time Traveling by Speeds
         </h1>
 
-        <section className="space-y-6 text-lg">
+        <section className="space-y-6 text-lg mx-auto w-full max-w-4xl">
             <h2 className="text-2xl font-dm_serif">The Theory of Special Relativity</h2>
             <div className='flex flex-col gap-4'>
                 <p>
@@ -40,32 +40,62 @@ const SpecialRelativity = () => {
 
                 <p>Play with the simulation below!</p>
                 <div className="p-6 rounded-lg shadow-sm">
-                    {/* Add your simulation component here */}
                     <TimeDilationSim />
                 </div>
             </div>
         </section>
 
-        <section className="space-y-6 mt-12 text-lg">
+        <section className="space-y-6 mt-12 text-lg mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">Twin Paradox: Demonstration of Time Dilation</h2>
             <p>
                 You don't need to understand how time dilation formula was derived to know the correlation between time and speed.
                 Twin Paradox demonstrates time dilation visually and easily.
             </p>
-            <TwinParadoxSim />
-            <p>
-                Suppose there are two astronauts A and B. Astronaut A is on a moving spaceship, while B is standing on the Earth.
-                In this demonstration, A shots a light straight up, and the light moves vertically up and down. 
-            </p>
-            <p>
-                From A's perspective, the light only goes up and down. But, from B's perspective, the light travels longer.
-            </p>
-            <p>
-               Since A is moving at a constant speed and the light travels a longer distance from B's (or Earth) perspective, A's time becomes greater and dilated. 
-            </p>
+            
+            <div className='flex flex-col items-center gap-6'>
+                <div className='flex gap-4 max-w-4xl'>
+                    <img src='/src/assets/twin_paradox1.png' alt='twin_paradox1.png' className='h-[450px]'/>
+                    <p>
+                        Suppose there are two astronauts A and B. Astronaut A is on a spaceship moving at a constant speed v, while B is standing on the Earth.
+                    </p>
+                </div>
+                <div className='flex gap-4 max-w-4xl'>
+                    <img src='/src/assets/twin_paradox2.png' alt='twin_paradox2.png' className='h-[450px]'/>
+                    <p>
+                        On the starting point of motion, astronaut A shots a laser beam vertically. This beam hits the top ceiling and and reflect back to the bottom.
+                    </p>
+                </div>
+                <div className='flex gap-4 max-w-4xl'>
+                    <img src='/src/assets/twin_paradox3.png' alt='twin_paradox3.png' className='h-[450px]'/>
+                    <p>
+                        But in B's perspective, the total distance travelled by A is longer.
+                    </p>
+                </div>
+                <div className='flex gap-4 max-w-4xl'>
+                    <img src='/src/assets/twin_paradox4.png' alt='twin_paradox4.png' className='h-[450px]'/>
+                    <div className='flex flex-col gap-2'>
+                        <p>
+                            In A's perspective, the total distance they travelled is only 2d. 
+                            (* d: vertical distance of light beam)
+                        </p>
+                        <p>
+                            Since time is universal and the spaceship is moving uniformly at v, A's time must be dilated to cover the longer distance while maintaining its speed.
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    Therefore, time of an object moving at a faster speed goes slower than an object stationary or moving less slowerly.
+                </p>
+            </div>
         </section>
 
-        <section className="space-y-6 mt-12 text-lg">
+        <section className="space-y-6 mt-12 text-lg mx-auto max-w-4xl">
+            <h2 className="text-2xl font-dm_serif">Twin Paradox Simulation</h2>
+            <p>Play with the simulation to visualize time dilation relative to speed!</p>
+            <TwinParadoxSim />
+        </section>
+
+        <section className="space-y-6 mt-12 text-lg mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">Twin Paradox in Real Life: The Astronaut Scotty Kelly and His Brother</h2>
             <div className='flex flex-col gap-4'>
                 <img src={scotty_kelly_and_his_twin} className='h-[560px]' alt='Scotty Kelly and His Twin Brother'/>
