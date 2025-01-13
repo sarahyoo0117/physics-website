@@ -86,7 +86,7 @@ const SpecialRelativity = () => {
             </p>
             <p>
                 In daily lives, we experience time dilation whenever we drive car or take a bus.
-                But its effect is so tiny, unoticable that it hardly affects our lives and we never even notice it.
+                But its effect is so tiny and negligible that it hardly affects our lives and we never even notice it.
             </p>
             <p>
                 To see a significant effect, we must move at a speed close to the light's speed.

@@ -6,3 +6,4 @@ export const gravitational_time_dilation_formula='https://lh3.googleusercontent.
 export const travis_scott='https://i.dailymail.co.uk/1s/2021/05/02/19/42485396-0-image-a-31_1619980350648.jpg'
 export const wormhole='https://iasbaba.com/wp-content/uploads/2022/07/ggg.jpg'
 export const exotic_matter='https://miro.medium.com/v2/resize:fit:1400/1*wjdlomfFi1dQbQBkvvwlvw.png'
+export const field_equation='https://bigthink.com/wp-content/uploads/2021/09/27473460.jpg?fit=1200,675'
