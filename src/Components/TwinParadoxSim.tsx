@@ -76,7 +76,7 @@ const TwinParadoxSim = () => {
       <div>
         <label>Traveling speed: </label>
         <input type='number' value={travelingSpeed} onChange={onChangeSpeed} className='text-black' max="30"/>
-        <p>Earth Twin's Time: {earthTime.toFixed(2)} seconds <span className='px-4'>* after 30, time is so tiny that it is shown as NaN.</span></p>
+        <p>Earth Twin's Time: {earthTime.toFixed(2)} seconds <span className='px-4'>* after 30, time becomes so tiny that it displays NaN.</span></p>
         <p>Traveling Twin's Time: {travelingTime.toFixed(2)} seconds</p>
       </div>
     </div>
