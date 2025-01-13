@@ -32,6 +32,10 @@ const Citations = () => {
                 ‌Today, M. W., Universe. (n.d.). <cite>There’s a Theory Beyond Relativity That Would Allow You to Fly Through a Wormhole</cite>. ScienceAlert.<br/>
                 <a href="https://www.sciencealert.com/there-s-a-theory-of-relativity-that-could-allow-you-to-fly-through-a-wormhole">https://www.sciencealert.com/there-s-a-theory-of-relativity-that-could-allow-you-to-fly-through-a-wormhole</a> 
             </p>
+            <p>
+                Marshall, M. (2023, November 12). <cite>Is time travel really possible? Here’s what physics says.</cite> Www.bbc.com; BBC. 
+                <a href="https://www.bbc.com/future/article/20231110-doctor-who-is-time-travel-really-possible-heres-what-physics-says">https://www.bbc.com/future/article/20231110-doctor-who-is-time-travel-really-possible-heres-what-physics-says</a> 
+            </p>
         </section>
     </div>
   )
