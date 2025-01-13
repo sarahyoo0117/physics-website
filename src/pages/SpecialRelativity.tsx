@@ -10,7 +10,7 @@ const SpecialRelativity = () => {
             Method 1: Time Traveling by Speeds
         </h1>
 
-        <section className="space-y-6 text-lg mx-auto w-full max-w-4xl">
+        <section className="space-y-6 mx-auto w-full max-w-4xl">
             <h2 className="text-2xl font-dm_serif">The Theory of Special Relativity</h2>
             <div className='flex flex-col gap-4'>
                 <p>
@@ -45,7 +45,7 @@ const SpecialRelativity = () => {
             </div>
         </section>
 
-        <section className="space-y-6 mt-12 text-lg mx-auto max-w-4xl">
+        <section className="space-y-6 mt-12 mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">Twin Paradox: Demonstration of Time Dilation</h2>
             <p>
                 You don't need to understand how time dilation formula was derived to know the correlation between time and speed.
@@ -83,23 +83,30 @@ const SpecialRelativity = () => {
                         </p>
                     </div>
                 </div>
-                <p>
-                    Therefore, time of an object moving at a faster speed goes slower than an object stationary or moving less slowerly.
-                </p>
             </div>
+            <p>
+                Therefore, time of an object moving at a faster speed goes slower than an object stationary or moving less slowerly.
+            </p>
+            <p>
+                In daily lives, we experience time dilation whenever we drive car or take a bus.
+                But its effect is so tiny, unoticable that it hardly affects our lives and we never even notice it.
+            </p>
+            <p>
+                To see a significant effect, we must move at a speed close to the light's speed.
+            </p>
         </section>
 
-        <section className="space-y-6 mt-12 text-lg mx-auto max-w-4xl">
+        <section className="space-y-6 mt-12 mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">Twin Paradox Simulation</h2>
             <p>Play with the simulation to visualize time dilation relative to speed!</p>
             <TwinParadoxSim />
         </section>
 
-        <section className="space-y-6 mt-12 text-lg mx-auto max-w-4xl">
+        <section className="space-y-6 mt-12 mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">Twin Paradox in Real Life: The Astronaut Scotty Kelly and His Brother</h2>
             <div className='flex flex-col gap-4'>
                 <img src={scotty_kelly_and_his_twin} className='h-[560px]' alt='Scotty Kelly and His Twin Brother'/>
-                <label className='text-gray-400'>^ Scotty Kelly and his twin brother (left)</label>
+                <label className='text-gray-400'>^ Scotty Kelly (right) and his twin brother (left)</label>
                 <p>
                     Astronauts experience time dilation because they travel at high speeds in orbitals around the Earth. For example, former NASA astronaut Scotty Kelly completed historic one-year mission abroad the International Space Station (ISS), which was the longest spaceflight by an American astronaut. While in space, he aged more slowly than his twin brother, who stayed on the Earth.
                 </p>

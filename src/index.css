@@ -17,3 +17,7 @@ html, body {
   background-color: #202020;
   color: whitesmoke;
 }
+
+p {
+  font-size: 21px;
+}

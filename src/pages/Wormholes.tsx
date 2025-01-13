@@ -1,4 +1,5 @@
 import { WormholeSim } from "../Components"
+import { exotic_matter, wormhole } from "../imeags"
 
 const Wormholes = () => {
   return (
@@ -6,8 +7,9 @@ const Wormholes = () => {
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Extra: Wormhole Theory
         </h1>
-        <section className="space-y-6 text-lg mx-auto max-w-4xl">
+        <section className="space-y-6 mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">Possibility of Time Travel Through Wormholes</h2>
+            <img src={wormhole} alt="wormhole diagram"/>
             <p>
                 Wormholes are consistent with general relativity, but wheter they actually exist is unknown.
                 General relativity predicts wormholes as solutions to Einstein's field equation, which describes how mass and energy curve spacetime. See the formula below.
@@ -27,6 +29,7 @@ const Wormholes = () => {
                 The wormhole is prevented from collasping by exotic matter--a theoretical matter with negative energy density.
                 This exotic matter causes repulsive gravity and makes the wormhole stably open.
             </p>
+            <img src={exotic_matter}/>
             <p>
                 In theory, if one end of a traversable wormhole were moved at a significant fraction of the speed of light or placed in a strong gravitational field (near a massive object like a black hole), it could experience time dilation as explained in the general relativity section.
                 This time dilation creates so-called, 'time traveling' effect.
@@ -46,7 +49,7 @@ const Wormholes = () => {
                 />
             </div>
         </section>
-        <section className="space-y-6 text-lg mx-auto max-w-4xl mt-8">
+        <section className="space-y-6 mx-auto max-w-4xl mt-8">
             <h2 className="text-2xl font-dm_serif">Conclusion + Is It Possible to Time-Travel Into the Past?</h2>
             <p>
                 The relativity theories say it is possible to time travel into the future. It can be done by travelling at speeds close to the speed of light or spending time in an intense gravitational field. However, travelling into the past is either wildly difficult or absolutely impossible.

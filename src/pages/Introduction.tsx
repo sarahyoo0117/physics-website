@@ -2,7 +2,7 @@
 const Introduction = () => {
   return (
     <div className="font-open_sans pt-6">
-        <section className="max-w-4xl mx-auto text-lg flex flex-col gap-4 relative">
+        <section className="max-w-4xl mx-auto flex flex-col gap-4 relative">
             <h1 className="text-4xl font-dm_serif text-center mb-6">
                 Time Traveling Into the Future
             </h1>

@@ -7,7 +7,7 @@ const GeneralRelativity = () => {
         <h1 className="text-4xl font-dm_serif text-center mb-6">
             Method 2: Gravitational Time Dilation
         </h1>
-        <section className="space-y-6 text-lg mx-auto max-w-4xl">
+        <section className="space-y-6 mx-auto max-w-4xl">
             <h2 className="text-2xl font-dm_serif">The Theory of General Relativity</h2>
             <p>
                 General relativity is 'generalized' version of special relativity by involving gravity.
@@ -22,7 +22,7 @@ const GeneralRelativity = () => {
                 When you return to a region of weaker gravity, you would find that much more time has passed for everyone else, but only a small amount of time would have passed for you. In essence, you would have "traveled" into the future.
             </p>
         </section>
-        <section className="space-y-6 text-lg mx-auto max-w-4xl pt-6">
+        <section className="space-y-6 mx-auto max-w-4xl pt-6">
             <h2 className="text-2xl font-dm_serif">Real life example: GPS satellites</h2>
             <img src={satellite} alt='satellite imeage'/>
             <p>
@@ -34,7 +34,7 @@ const GeneralRelativity = () => {
                 This is how general relativity enables a form of time travel—by manipulating the flow of time itself through the curvature of spacetime caused by gravity.
             </p>
         </section>
-        <section className="space-y-6 text-lg mx-auto max-w-4xl pt-6">
+        <section className="space-y-6 mx-auto max-w-4xl pt-6">
             <h2 className="text-2xl font-dm_serif">Gravitational Time Dilation Formula</h2>
             <div className='flex gap-8'>
                 <img src={gravitational_time_dilation_formula} alt='gravitational time dilation formula'/>
@@ -47,7 +47,7 @@ const GeneralRelativity = () => {
                 </ul>
             </div>
         </section>
-        <section className="space-y-6 text-lg mx-auto max-w-4xl pt-6">
+        <section className="space-y-6 mx-auto max-w-4xl pt-6">
             <h2 className="text-2xl font-dm_serif">Gravitational Time Dilation Simulation</h2>
             <p className='whitespace-pre-line'>
                 Play with simulation and understand time dilation by gravity!
