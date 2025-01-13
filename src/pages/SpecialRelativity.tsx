@@ -32,11 +32,8 @@ const SpecialRelativity = () => {
                 <img src={time_dilation_formula} className='h-[300px] w-[500px]'/>
                 <p>
                     The equation tells that dilated time is inversely proportional to velocity.
+                    So, travelling at speed close to light delays time significantly and creates a ‘time-travelling’ effect.
                 </p>
-                <p>
-                    At a speed close to light, 1 second relative to the Earth is measured around 19.6 hours. So, after one hour of travel, 19.6h x 3600s = 70,560 hours have passed on the Earth. After 24 hours of travel, 70,560h x 24 = 1,693,440 hours have passed, which is around 193 years!
-                </p>
-                <p>Therefore, travelling at a speed close to light delays time significantly and creates a ‘time-travelling’ effect.</p>
 
                 <p>Play with the simulation below!</p>
                 <div className="p-6 rounded-lg shadow-sm">

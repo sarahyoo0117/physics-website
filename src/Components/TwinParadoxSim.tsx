@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, Dispatch, SetStateAction, ChangeEvent } fr
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Vector3 } from 'three';
 import Spaceship from '../meshes/Spaceship';
-import { calculateTimeDilationBySpeed } from '../utils';
+import { timeDilatedOfTravelerBySpeed } from '../utils';
 
 const Globe = () => {
   return (
@@ -22,7 +22,7 @@ const TravelingTwin = ({ travelingSpeed, setTravelingTime, earthTime }: {traveli
     spaceshipPosition.current.x += travelingSpeed * adjust_factor;
     travelingTwinRef.current!.position.x = spaceshipPosition.current.x;
     const visual_factor = 10000000;
-    setTravelingTime(calculateTimeDilationBySpeed(earthTime, travelingSpeed * visual_factor));
+    setTravelingTime(timeDilatedOfTravelerBySpeed(earthTime, travelingSpeed * visual_factor));
 
     if (spaceshipPosition.current.x > 10) {
       spaceshipPosition.current.x = -10;

@@ -1,30 +1,23 @@
 import { MathJax, MathJaxContext } from 'better-react-mathjax';
 import { ChangeEvent, useState } from 'react';
 import { math_jx_config } from '../configs';
+import { c, timeDilatedOfTravelerBySpeed } from '../utils';
 
 const TimeDilationSim = () => {
   const [velocity, setVelocity] = useState(0); // Speed as a fraction of the speed of light
   const [duration, setDuration] = useState(1); // Duration in hours
   const [timeEarth, setTimeEarth] = useState(duration); // Time passed on Earth
 
-  const speedOfLight = 299792458; // m/s
-
-  const calculateTimeDilation = (v: number, t: number) => {
-    const velocity = v * speedOfLight; // Convert to m/s
-    const time_dilated = t * Math.sqrt(1 - (velocity * velocity) / (speedOfLight * speedOfLight));
-    return time_dilated;
-  };
-
   const handleVelocityChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newVelocity = parseFloat(event.target.value);
     setVelocity(newVelocity);
-    setTimeEarth(calculateTimeDilation(newVelocity, duration));
+    setTimeEarth(timeDilatedOfTravelerBySpeed(duration, newVelocity * c));
   };
 
   const handleDurationChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newDuration = parseFloat(event.target.value);
     setDuration(newDuration);
-    setTimeEarth(calculateTimeDilation(velocity, newDuration));
+    setTimeEarth(timeDilatedOfTravelerBySpeed(newDuration, velocity * c));
   };
 
   return (
