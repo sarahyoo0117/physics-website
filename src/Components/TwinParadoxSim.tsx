@@ -3,11 +3,12 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Vector3 } from 'three';
 import Spaceship from '../meshes/Spaceship';
 import { timeDilatedOfTravelerBySpeed } from '../utils';
+import { OrbitControls } from '@react-three/drei';
 
 const Globe = () => {
   return (
-    <mesh position={[0, -3, 0]}>
-      <sphereGeometry args={[2, 32, 32]} />
+    <mesh position={[0, -4, 0]}>
+      <sphereGeometry args={[3, 32, 32]} />
       <meshStandardMaterial color="blue" />
     </mesh>
   );
@@ -36,7 +37,7 @@ const TravelingTwin = ({ travelingSpeed, setTravelingTime, earthTime }: {traveli
 
   return (
     <mesh ref={travelingTwinRef} position={spaceshipPosition.current}>
-      <Spaceship position={new Vector3(0, 0, 0)} />
+      <Spaceship props={{scale: 0.0025}}/>
     </mesh>
   );
 };
@@ -66,9 +67,11 @@ const TwinParadoxSim = () => {
   return (
     <div className='h-[50vh] flex flex-col'>
       <Canvas>
-          <ambientLight intensity={0.5} />
+          <color attach="background" r={0} g={0} b={0}/>
+          <ambientLight intensity={1} />
           <directionalLight position={[5, 5, 5]} />
           <Globe />
+          <OrbitControls />
           <TravelingTwin travelingSpeed={travelingSpeed} setTravelingTime={setTravelingTime} earthTime={earthTime}/>
       </Canvas>
 
