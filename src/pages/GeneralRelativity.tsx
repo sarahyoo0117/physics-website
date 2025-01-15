@@ -1,5 +1,5 @@
 import { GeneralRelativitySim } from '../Components'
-import { gravitational_time_dilation_formula, satellite } from '../imeags'
+import { gravitational_time_dilation_formula, satellite } from '../images'
 
 const GeneralRelativity = () => {
   return (

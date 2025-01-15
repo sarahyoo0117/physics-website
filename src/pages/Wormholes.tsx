@@ -1,5 +1,5 @@
 import { WormholeSim } from "../Components"
-import { exotic_matter, field_equation, wormhole } from "../imeags"
+import { exotic_matter, field_equation, wormhole } from "../images"
 
 const Wormholes = () => {
   return (

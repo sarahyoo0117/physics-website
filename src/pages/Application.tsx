@@ -1,5 +1,5 @@
 import { MathJax, MathJaxContext } from "better-react-mathjax"
-import { travis_scott } from "../imeags"
+import { travis_scott } from "../images"
 import { math_jx_config } from "../configs"
 
 const Application = () => {

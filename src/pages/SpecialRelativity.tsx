@@ -1,5 +1,5 @@
 import { TimeDilationSim, TwinParadoxSim } from '../Components'
-import { scotty_kelly_and_his_twin, time_dilation_formula } from '../imeags'
+import { scotty_kelly_and_his_twin, time_dilation_formula } from '../images'
 import { MathJax, MathJaxContext } from 'better-react-mathjax'
 import { math_jx_config } from '../configs'
 
@@ -51,25 +51,25 @@ const SpecialRelativity = () => {
             
             <div className='flex flex-col items-center gap-6'>
                 <div className='flex gap-4 max-w-4xl'>
-                    <img src='/src/assets/twin_paradox1.png' alt='twin_paradox1.png' className='h-[450px]'/>
+                    <img src='/images/twin_paradox1.png' alt='twin_paradox1.png' className='h-[450px]'/>
                     <p>
                         Suppose there are two astronauts A and B. Astronaut A is on a spaceship moving at a constant speed v, while B is standing on the Earth.
                     </p>
                 </div>
                 <div className='flex gap-4 max-w-4xl'>
-                    <img src='/src/assets/twin_paradox2.png' alt='twin_paradox2.png' className='h-[450px]'/>
+                    <img src='/images/twin_paradox2.png' alt='twin_paradox2.png' className='h-[450px]'/>
                     <p>
                         On the starting point of motion, astronaut A shots a laser beam vertically. This beam hits the top ceiling and and reflect back to the bottom.
                     </p>
                 </div>
                 <div className='flex gap-4 max-w-4xl'>
-                    <img src='/src/assets/twin_paradox3.png' alt='twin_paradox3.png' className='h-[450px]'/>
+                    <img src='/images/twin_paradox3.png' alt='twin_paradox3.png' className='h-[450px]'/>
                     <p>
                         But in B's perspective, the total distance travelled by A is longer.
                     </p>
                 </div>
                 <div className='flex gap-4 max-w-4xl'>
-                    <img src='/src/assets/twin_paradox4.png' alt='twin_paradox4.png' className='h-[450px]'/>
+                    <img src='/images/twin_paradox4.png' alt='twin_paradox4.png' className='h-[450px]'/>
                     <div className='flex flex-col gap-2'>
                         <p>
                             In A's perspective, the total distance they travelled is only 2d. 

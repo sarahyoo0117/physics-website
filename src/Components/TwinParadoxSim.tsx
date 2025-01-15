@@ -3,7 +3,6 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Vector3 } from 'three';
 import Spaceship from '../meshes/Spaceship';
 import { timeDilatedOfTravelerBySpeed } from '../utils';
-import { OrbitControls } from '@react-three/drei';
 
 const Globe = () => {
   return (
@@ -71,7 +70,6 @@ const TwinParadoxSim = () => {
           <ambientLight intensity={1} />
           <directionalLight position={[5, 5, 5]} />
           <Globe />
-          <OrbitControls />
           <TravelingTwin travelingSpeed={travelingSpeed} setTravelingTime={setTravelingTime} earthTime={earthTime}/>
       </Canvas>
 
