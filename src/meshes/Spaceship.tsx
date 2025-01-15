@@ -3,7 +3,7 @@ import { GroupProps } from "@react-three/fiber";
 import { Mesh } from "three";
 
 const Spaceship = ({ props } : { props?: GroupProps}) => {
-  const { nodes, materials } = useGLTF('/src/assets/space_shuttle/scene.gltf')
+  const { nodes, materials } = useGLTF('/space_shuttle/scene.gltf');
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -17,5 +17,7 @@ const Spaceship = ({ props } : { props?: GroupProps}) => {
     </group>
   )
 };
+
+useGLTF.preload('/the_space_shuttle/scene.gltf')
 
 export default Spaceship;
