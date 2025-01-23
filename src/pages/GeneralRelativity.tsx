@@ -15,7 +15,7 @@ const GeneralRelativity = () => {
             <p>
                 It states that the presence of a massive object causes a bending of spacetime or <strong>spacetime curvature</strong>.
                 Time passes slowly near a large mass because the mass curves spacetime, which increases the distance an object near the mass' gravitational field has to travel.
-                It's basically the same idea as time dilation in special relativity (time should be dilated to cover longer distance). This phenomenon is called <strong>gravitational time dilation</strong>.
+                It's basically the same idea as time dilation in special relativity (that time should be dilated to cover longer distance). This phenomenon is called <strong>gravitational time dilation</strong>.
             </p>
             <p>
                 By traveling near a massive object, or spending time in a strong gravitational field, you could experience time at a much slower rate than people who remain in weaker gravitational environments.
@@ -24,7 +24,7 @@ const GeneralRelativity = () => {
         </section>
         <section className="space-y-6 mx-auto max-w-4xl pt-6">
             <h2 className="text-2xl font-dm_serif">Real life example: GPS satellites</h2>
-            <img src={satellite} alt='satellite imeage'/>
+            <img src={satellite} alt='satellite image'/>
             <p>
                 An example that is influenced by gravitational field is GPS satellites. Satellites orbit the Earth in a weaker gravitational field than we experience on the ground, as they locate at a longer distance from the Earth.
                 As a result, satellites' clocks run slightly faster than those on Earth. Engineers must account for this effect to ensure the GPS system remains accurate. Otherwise, Google Maps would be wrong by about 10km a day!
@@ -50,7 +50,7 @@ const GeneralRelativity = () => {
         <section className="space-y-6 mx-auto max-w-4xl pt-6">
             <h2 className="text-2xl font-dm_serif">Gravitational Time Dilation Simulation</h2>
             <p className='whitespace-pre-line'>
-                Play with simulation and understand time dilation by gravity!
+                Play with simulation below and understand time dilation by gravity!
                 See how orbiting object's time is dilated near the gravitational field.
             </p>
             <GeneralRelativitySim />

@@ -14,8 +14,8 @@ const Application = () => {
             <img src={travis_scott} alt="travis scott and his private jet"/> 
             <p>
               Travis Scott, the famous singer, was ranked first for taking most flights in 2024.
-              He spent most time on flights while we are living on ground.
-              Don't you want to know how much Travis Scott's time was dilated? Let's find out with the concept of special relativity!
+              He spent most time on flights while we are spending time on ground.
+              Don't you want to know how much Travis Scott's time was dilated? Let's find out with the concept of relativity theory!
             </p>
             <MathJaxContext version={3} config={math_jx_config}>
               <MathJax>Travis Scott's total flight time: 42 days 22 hours 57 minutes {'$= 3711420 s$'}</MathJax>

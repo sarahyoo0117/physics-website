@@ -69,7 +69,14 @@ const Wormholes = () => {
                 The relativity theories say it is possible to time travel into the future. It can be done by travelling at speeds close to the speed of light or spending time in an intense gravitational field. However, travelling into the past is either wildly difficult or absolutely impossible.
             </p>
             <p>
-                One specific reason of this is because going back to the past requires universal to decrease in enthrophy, which is a measure of the disorder of a system. This violates the second law of thermodynamics stating that entropy or randomness must always increase.
+                One specific reason of this is going back to the past requires universal to decrease in enthrophy, which is a measure of the disorder of a system. This violates the second law of thermodynamics stating that entropy or randomness must always increase.
+                This means time naturally progresses from a state of order to disorder, making reversing time contrary to the laws of physics. Additionally, it introduces paradoxes like the "grandfather paradox" that violate causality, where the cause must precede the effect.
+            </p>
+            <p>
+                Furthermore, while general relativity permits theoretical constructs like closed timelike curves and wormholes, stabilizing these would require exotic matter, which is speculative and unobserved. Also theories like Stephen Hawking's chronology protection conjecture suggest that physical laws inherently prevent such time travel to maintain the consistency of historical events. 
+            </p>
+            <p>
+                Therefore, while traveling to the future is feasible with high-speed travel or intense gravitational fields, the hurdles for traveling to the past are insurmountable with our current understanding and technology.
             </p>
         </section>
     </div>
