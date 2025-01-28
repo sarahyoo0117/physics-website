@@ -61,7 +61,7 @@ const Wormholes = () => {
                 These energy transfers must obey the conservation of energy (as it is a fundamental principle). The total energy of the system, including the energy of the object, the wormhole, and the exotic matter, must remain constant.
             </p>
             <p>
-                So, the exotic matter is what makes the wormhole theory unpredictable. Its negative energy density implies that it can create regions where the total energy appears to be less than zero, which is contradictory to the conservation of energy law. 
+                So, the exotic matter is what makes the wormhole theory unpredictable. Its negative energy density implies that it can create regions where the total energy appears to be less than zero, which is conterintuitive with the conservation of energy law. 
             </p>
 
             <p>
