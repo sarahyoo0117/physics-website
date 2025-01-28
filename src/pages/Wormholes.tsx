@@ -5,7 +5,7 @@ const Wormholes = () => {
   return (
     <div className="pt-6 font-open_sans flex flex-col gap-6">
         <h1 className="text-4xl font-dm_serif text-center mb-6">
-            Extra: Wormhole Theory
+            Method 3: Time Travel Through Wormholes (Theoretical)
         </h1>
 
         <section className="space-y-6 mx-auto max-w-4xl">
@@ -42,11 +42,28 @@ const Wormholes = () => {
                 The wormhole is prevented from collasping by exotic matter—a theoretical matter with negative energy density.
                 This exotic matter causes repulsive gravity and makes the wormhole stably open.
             </p>
-            <img src={exotic_matter}/>
             <p>
                 In theory, if one end of a traversable wormhole were moved at a significant fraction of the speed of light or placed in a strong gravitational field (near a massive object like a black hole), it could experience time dilation as explained in the general relativity section.
                 This time dilation creates so-called, 'time traveling' effect.
             </p>
+        </section>
+        
+        <section className="space-y-6 mx-auto max-w-4xl">
+            <h2 className="text-2xl font-dm_serif">Exotic Matter and Conservation of Energy</h2>
+            <img src={exotic_matter}/>
+            <p>
+                The energy conservation principle implies that this exotic matter must come from somewhere, and its total energy must be accounted for in the system's energy balance.
+            </p>
+            <p>
+                Traveling through a wormhole could involve significant energy transfer. As an object enters a wormhole, it would need to overcome the gravitational forces at the entrance, requiring energy. Similarly, exiting the wormhole would involve an energy change due to the differing gravitational potentials at the two ends.
+            </p>
+            <p>
+                These energy transfers must obey the conservation of energy (as it is a fundamental principle). The total energy of the system, including the energy of the object, the wormhole, and the exotic matter, must remain constant.
+            </p>
+            <p>
+                So, the exotic matter is what makes the wormhole theory unpredictable. Its negative energy density implies that it can create regions where the total energy appears to be less than zero, which is contradictory to the conservation of energy law. 
+            </p>
+
             <p>
                 Physicists, including Stephen Hawking, assume that wormholes constantly pop in and out of existence at the quantum scale, far smaller than atoms. 
                 However, there is no evidence for the existence of wormholes, even if evidence of black holes is substantial. The theory hasn’t been proved due to the incompatibility of general relativity with quantum mechanics.
